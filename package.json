@@ -1,0 +1,21 @@
+{
+  "name": "login-node",
+  "version": "1.0.0",
+  "description": "login node",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon app.js",
+    "test": "tester"
+  },
+  "keywords": [
+    "secret"
+  ],
+  "author": "s.h.chandra_sekhar",
+  "license": "ISC",
+  "dependencies": {
+    "@cs7player/scrap-node-lib": "^0.0.1",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "express-validator": "^7.2.1"
+  }
+}
