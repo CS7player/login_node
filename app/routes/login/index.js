@@ -14,4 +14,4 @@ routes.post("/",[
  }
 })
 
-module.exports = routes
+module.exports = routes;
