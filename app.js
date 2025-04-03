@@ -3,12 +3,14 @@ const cors = require("cors");
 const app = express();
 app.use(cors());
 app.use(express.json());
+require('./app/utils/constants');
 const routes = require("./app/routes");
 app.use(routes);
-app.listen(3000, () => {
-  try {
-    console.log("the server is running on http://localhost:3000");
-  } catch (error) {
-    console.log(error);
-  }
+require('./app/utils/db');
+app.listen(PORT, () => {
+ try {
+  console.log(`the server is running on http://localhost:${PORT}`);
+ } catch (error) {
+  console.log(error);
+ }
 });
