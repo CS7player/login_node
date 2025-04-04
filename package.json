@@ -4,7 +4,7 @@
   "description": "login node",
   "main": "app.js",
   "scripts": {
-    "dev": "node app.js",
+    "dev": "nodemon app.js",
     "test": "tester"
   },
   "keywords": [
