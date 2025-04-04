@@ -1,5 +1,6 @@
 const pbkdf = require("@cs7player/scrap-node-lib").pbkdf;
 const queryData = require("./../../utils/query");
+const jwt = require("../../utils/jwt");
 
 exports.login = async (reqParams) => {
  try {
@@ -15,7 +16,8 @@ exports.login = async (reqParams) => {
   if(!checking){
    return { status: false, msg: 'incorrect password'};
   }
-  return {status : true , msg:'Login Successfully!!!'};
+  const token =await jwt.generateToken(result[0]);
+  return {status : true , msg:'Login Successfully!!!',jwt_token : token};
  } catch (error) {
   throw error;
  }

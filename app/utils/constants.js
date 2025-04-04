@@ -5,6 +5,6 @@ global.SQL_USER=process.env.SQL_USER;
 global.SQL_PASSWORD=process.env.SQL_PASSWORD;
 global.SQL_DATABASE=process.env.SQL_DATABASE;
 global.PORT=process.env.PORT;
-
+global.SECRET_KEY=process.env.SECRET_KEY;
 
 global.LOGIN_TABLE='login';
