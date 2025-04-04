@@ -8,3 +8,4 @@ global.PORT=process.env.PORT;
 global.SECRET_KEY=process.env.SECRET_KEY;
 
 global.LOGIN_TABLE='login';
+

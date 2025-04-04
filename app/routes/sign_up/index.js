@@ -15,4 +15,15 @@ routes.post('/',[
   }
 })
 
-module.exports = routes;
+routes.post("/",[
+ check("email","Invalid Email").trim().isEmail()
+],(req,res,next)=>{
+ const errors = validationResult(req);
+ if (!errors.isEmpty()) {
+  res.status(400).json({ status: false, error: errors.array() });
+ } else {
+  sign_up_ctrl.mail_verfication(req, res, next);
+ }
+})
+
+module.exports = routes
