@@ -1,8 +1,12 @@
 const express = require("express");
 const cors = require("cors");
 const app = express();
-app.use(cors((req, callback) => {
- callback(null, { origin: true });
+// app.use(cors('*'));
+app.use(cors({
+ origin: function (origin, callback) {
+   //console.log('Request Origin:', origin); // This logs every request origin
+   callback(null, true); // Allow all origins
+ }
 }));
 app.use(express.json());
 require('./app/utils/constants');
